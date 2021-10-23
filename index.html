@@ -1,20 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chalk Talk</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+            color: #fff;
+        }
+        .hero{
+            background-image: url(./pictures/chalkboard.jpeg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+        }
+        .hero > *{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+        .logo{
+           align-items: flex-end;
+            flex: 0 0 40%; 
+            display: flex;
+            flex-direction: column;  
+            align-items: center;
+            justify-content: flex-end;
+        }
+        .logo h1{
+            font-family: 'Fredericka the Great', cursive;
+            font-size: 4em;
+        }
+        form{
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .form{
+            flex:0 0 60%;
+            height: auto;
+            display: flex;
+            align-items: flex-start;
+        }
+        .text-field{
+            border-radius: 20px;
+            padding: 5px 10px;
+        }
+        h3{
+            margin: 30px 0 8px 0;
+            font-size: 1em;
+            font-family: 'Fredericka the Great', cursive;
+            color: #fff;
+            border-bottom: 3px solid #4e9e4a;
+        }
+        .btn{
+            color:#68d463;
+            font-weight: 600;
+            border: 3px solid #4e9e4a;
+        }
+        .text-field{
+            color: #000;
+        }
+        .btn:hover{
+            background-color: #346B31; 
+        }
+    </style>
 </head>
 <body>
     <div class="hero">
-        <form action="chat.html">
-            <h3>Enter Course Code</h3>
-            <input type="text" name="course-code" id="">
-            <h3>Appear As</h3>
-            <input type="text" name="username" id=""><br>
-            <input type="submit" value="Join Space" >
-        </form>
+        <div class="logo">
+            <h1>ChalkTalk</h1>
+            <img src="./pictures/chalk2.png" alt="" width="500px">
+        </div>
+        <div class="form">
+            <form action="chat.html">
+                <h3>Enter Course Code</h3>
+                <input type="text" name="course-code" class="text-field" required maxlength="15">
+                <h3>Appear As</h3>
+                <input type="text" name="username" class="text-field" required maxlength="15"><br>
+                <input class="btn btn-outline-success" type="submit" value="Join Space" >
+            </form>
+        </div>
     </div>
 </body>
 </html>
